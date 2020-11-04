@@ -83,8 +83,6 @@ normal_events_df = pd.DataFrame({
 	'n': np.arange(0, plot_samples),
 	'anomaly': np.zeros(plot_samples)})
 
-
-
 # abnormal event
 abnormal_x = scaler.transform(abnormal_events)[:plot_samples].reshape(plot_samples, n_features)
 predicted_x = autoencoder.predict(x=abnormal_x)
